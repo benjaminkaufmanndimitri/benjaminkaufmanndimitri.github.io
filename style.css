@@ -1,0 +1,77 @@
+html, body {
+    background-image: url(assets/fondo.gif);
+    background-size: cover;
+    position: relative;
+}
+
+#fotos {
+    width: 500px;
+}
+
+#buttons1{
+    transition: 100ms;
+    width: 200px;
+    margin: 10px 15px;
+    box-shadow: 5px 5px 5px #00000075;
+}
+#buttons{
+    transition: 100ms;
+    width: 100px;
+}
+
+#buttons:hover {
+    scale: 1.1;
+    transition: 50ms;
+}
+#buttons1:hover {
+    scale: 1.1;
+    transition: 100ms;
+    box-shadow: 10px 10px 5px #00000075;
+}
+
+h1, h4 {
+    color: white;
+    text-shadow: 0 0 5px #000000;
+}
+
+.accordion, .accordion-item, .accordion-header {
+    background-color: #00000000;
+    color: #00000000;
+    --bs-accordion-btn-bg: #00000000;
+    --bs-accordion-active-bg: #00ff2a3d;
+    --bs-accordion-btn-bg: #00000065;
+    --bs-accordion-btn-color: white;
+    --bs-accordion-active-color: white;
+    --bs-accordion-border-color: #00000000;
+}
+
+
+
+/* Efecto de nieve */
+.snowflake {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.7;
+    pointer-events: none;
+    animation: fall linear infinite;
+}
+
+/* Animación de caída */
+@keyframes fall {
+    0% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+/* Configuración aleatoria para las partículas */
+.snowflake {
+    width: 5px; /* Tamaño más pequeño */
+    height: 5px; /* Tamaño más pequeño */
+    animation-duration: calc(5s + 10s * random());
+    left: calc(100% * random());
+    animation-delay: calc(-5s * random());
+}
